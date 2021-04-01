@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct DrinkCell: View {
-    let drink: Drink
+    let drinksDetails: DrinkDetails
+//    var viewModel = DrinkViewModel()
+    
     var body: some View {
+        
         ZStack {
-            // configure cells here
             VStack{
-                Text(drink.strDrink.capitalized)
+                Text(drinksDetails.name)
                     .font(.headline).bold()
                     .foregroundColor(.white)
                     .padding(.top, 8)
@@ -29,7 +31,7 @@ struct DrinkCell: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width:64,height: 64)
-                Text(drink.strCategory)
+                Text(drinksDetails.category)
                     .frame(width: 180, height: 80, alignment: .top)
                     .font(.body)
                     .padding([.leading,.trailing], 1)
@@ -43,6 +45,6 @@ struct DrinkCell: View {
 
 struct DrinkCell_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkCell(drink: TEST_DRINKS[2])
+        DrinkCell(drinksDetails: TEST_DRINKS[0])
     }
 }

@@ -14,16 +14,24 @@ struct DrinksView: View {
     // viewmodel
     @ObservedObject var viewModel = DrinkViewModel()
     
-    // configure our drinks list view
+    // configure our drink views
     var body: some View {
         NavigationView {
             ScrollView {
                 // works like recycler view, loads whats necessary
                 LazyVGrid(columns: gridItems, spacing: 20 ) {
-                    // load first 24 results
+                    // load each drink found in drinksviewmodel
+//                    for drink in viewModel.drinks {
+//                        DrinkCell(drinksDetails: drink)
+//                    }
+//                    ForEach(viewModel.drinks) { drink in
+//                        DrinkCell(drink: drinks)
+//                }
+                    
+                    // Mock data
                     ForEach(0..<24) { _ in
-                        DrinkCell(drink: TEST_DRINKS[0])
-                }
+                        DrinkCell(drinksDetails: TEST_DRINKS[0])
+                    }
                 }
             }
             .navigationTitle("Bartender")
