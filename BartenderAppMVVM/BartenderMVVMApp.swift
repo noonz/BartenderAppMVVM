@@ -8,10 +8,17 @@
 import SwiftUI
 
 @main
-struct BartenderAppMVVMApp: App {
+struct BartenderMVVM: App {
     var body: some Scene {
         WindowGroup {
-            DrinksView()
+            ContentView()
         }
     }
 }
+
+struct BartenderAppMVVMApp_Previews: PreviewProvider {
+    static var previews: some View {
+        DrinksView()
+    }
+}
+
