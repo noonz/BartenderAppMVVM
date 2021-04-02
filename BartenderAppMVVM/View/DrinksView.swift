@@ -20,18 +20,16 @@ struct DrinksView: View {
             ScrollView {
                 // works like recycler view, loads whats necessary
                 LazyVGrid(columns: gridItems, spacing: 20 ) {
+                    
                     // load each drink found in drinksviewmodel
-//                    for drink in viewModel.drinks {
-//                        DrinkCell(drinksDetails: drink)
-//                    }
-//                    ForEach(viewModel.drinks) { drink in
-//                        DrinkCell(drink: drinks)
-//                }
+                    ForEach(viewModel.cocktail) { cocktail in
+                        DrinkCell(drinksDetails: cocktail)
+                }
                     
                     // Mock data
-                    ForEach(0..<24) { _ in
-                        DrinkCell(drinksDetails: TEST_DRINKS[0])
-                    }
+//                    ForEach(0..<24) { _ in
+//                        DrinkCell(drinksDetails: TEST_DRINKS[0])
+//                    }
                 }
             }
             .navigationTitle("Bartender")
@@ -44,3 +42,4 @@ struct DrinksView_Previews: PreviewProvider {
         DrinksView()
     }
 }
+
