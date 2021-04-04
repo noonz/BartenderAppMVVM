@@ -14,7 +14,6 @@ struct DrinkCell: View {
     @State private var isActive = false
     
     var body: some View {
-        
         ZStack {
             VStack{
                 Text(drinksDetails.name)
@@ -38,21 +37,22 @@ struct DrinkCell: View {
                     .frame(width: 180, height: 30, alignment: .top)
                     .font(.body)
                     .padding([.leading,.trailing], 1)
+                    .foregroundColor(.white)
             }
         }
-        .background(Color.green)
+        .background(Color.black)
         
         //handle cell clicks
         .onTapGesture {
             self.isActive = true
         }
         .background(NavigationLink(
-                        destination: DrinkDetailsView(), isActive: $isActive,
+                        destination: DrinkDetailsView(drinkDetails: drinksDetails), isActive: $isActive,
                         label: {
                             EmptyView()
                         }))
         .cornerRadius(16)
-        .shadow(color: .green, radius: 4, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+        .shadow(color: .black, radius: 8, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
     }
 }
 

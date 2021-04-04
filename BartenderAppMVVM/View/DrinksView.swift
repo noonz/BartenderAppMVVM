@@ -16,11 +16,15 @@ struct DrinksView: View {
     
     // configure our drink views
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: gridItems, spacing: 20 ) { // works like recycler view, loads whats necessary
-                ForEach(viewModel.results) { result in  // load drinks into grid itemgrid
-                    DrinkCell(drinksDetails: result)
-                }
+        ZStack{
+            Color.green // set view background color green
+                .ignoresSafeArea(.all)
+            ScrollView {
+                LazyVGrid(columns: gridItems, spacing: 20 ) { // works like recycler view, loads whats necessary
+                    ForEach(viewModel.results) { result in  // load drinks into grid itemgrid
+                        DrinkCell(drinksDetails: result)
+                    }
+                }.padding(.top,20)
             }
         }
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RandomView: View {
+    
     var body: some View {
         Text("Random Drink View")
         //TODO: Build random drink page

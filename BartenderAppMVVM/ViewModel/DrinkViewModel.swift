@@ -23,6 +23,7 @@ class DrinkViewModel: ObservableObject {
     func fetchDrinks() {
         guard let url = URL(string: baseUrl) else { return }
 
+        //request data
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print("Failed to fetch data with error: ", error.localizedDescription)
