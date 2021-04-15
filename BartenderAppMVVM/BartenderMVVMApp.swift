@@ -11,6 +11,7 @@ import SwiftUI
 struct BartenderMVVM: App {
     var body: some Scene {
         WindowGroup {
+            // initial app startup
             ContentView(backgroundColor: .black, titleColor: UIColor.green)
         }
     }

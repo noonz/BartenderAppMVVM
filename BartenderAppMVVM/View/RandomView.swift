@@ -20,3 +20,8 @@ struct RandomView_Previews: PreviewProvider {
         RandomView()
     }
 }
+
+
+// floating button
+// click button, loads data from random api
+// loads drink details into drinkdetails page

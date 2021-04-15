@@ -16,6 +16,7 @@ struct DrinkCell: View {
     var body: some View {
         ZStack {
             VStack{
+                
                 Text(drinksDetails.name)
                     .font(.headline).bold()
                     .foregroundColor(.white)
@@ -28,11 +29,12 @@ struct DrinkCell: View {
                             .padding(.top, 8)
                     )
                     .frame(width: 180, height: 24)
-                // imported library function to handle images easier
+                
                 KFImage(URL(string: drinksDetails.thumbUrl))
                     .resizable()
                     .scaledToFit()
                     .frame(width:96,height: 96).padding(.vertical, 6)
+                
                 Text(drinksDetails.category)
                     .frame(width: 180, height: 30, alignment: .top)
                     .font(.body)
@@ -55,9 +57,3 @@ struct DrinkCell: View {
         .shadow(color: .black, radius: 8, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
     }
 }
-
-//struct DrinkCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DrinkCell(drinksDetails: TEST_DRINKS[0])
-//    }
-//}

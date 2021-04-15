@@ -70,7 +70,6 @@
 				6B1596D6261404B800440A1C /* View */,
 				6B1596D5261404B600440A1C /* Model */,
 				6B1596C5261404AC00440A1C /* BartenderMVVMApp.swift */,
-				6B1596C7261404AC00440A1C /* ContentView.swift */,
 				6B1596C9261404AD00440A1C /* Assets.xcassets */,
 				6B1596CE261404AD00440A1C /* Info.plist */,
 				6B1596CB261404AD00440A1C /* Preview Content */,
@@ -98,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6B1596DE2614051600440A1C /* DrinkCell.swift */,
+				6B1596C7261404AC00440A1C /* ContentView.swift */,
 				6B1596E12614128A00440A1C /* DrinksView.swift */,
 				6BAA19132616CD4F00E7418B /* RandomView.swift */,
 				6BAA19162616CDC000E7418B /* DrinkDetailsView.swift */,
