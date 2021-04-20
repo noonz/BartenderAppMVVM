@@ -11,10 +11,11 @@ Libraries used in this project include:
 **KingFisher:** Downloading/Displaying image urls  
 
 ## Screenshots
-<img src="./screenshots/bartender_home.png" width="400" height="800">
-<img src="./screenshots/bartender_details.png" width="400" height="800">
-<img src="./screenshots/bartender_random.png" width="400" height="800">
-
+<p float="left">
+  <img src="./screenshots/bartender_home.png" width="400" height="800">
+  <img src="./screenshots/bartender_details.png" width="400" height="800">
+  <img src="./screenshots/bartender_random.png" width="400" height="800">
+</p>
 ## Pages
 
 ### Main Page
