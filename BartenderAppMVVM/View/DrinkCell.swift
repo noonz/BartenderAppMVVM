@@ -16,7 +16,7 @@ struct DrinkCell: View {
     var body: some View {
         ZStack {
             VStack{
-                
+                // customize drink cells here
                 Text(drinksDetails.name)
                     .font(.headline).bold()
                     .foregroundColor(.white)
@@ -44,12 +44,14 @@ struct DrinkCell: View {
         }
         .background(Color.black)
         
-        //handle cell clicks
+        // handle cell clicks
         .onTapGesture {
             self.isActive = true
         }
         .background(NavigationLink(
-                        destination: DrinkDetailsView(drinkDetails: drinksDetails), isActive: $isActive,
+                        destination: DrinkDetailsView(drinkDetails: drinksDetails)
+                            .navigationTitle("\(drinksDetails.name) Details"),
+                        isActive: $isActive,
                         label: {
                             EmptyView()
                         }))

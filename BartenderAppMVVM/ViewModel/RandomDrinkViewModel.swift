@@ -2,16 +2,16 @@
 //  DrinkViewModel.swift
 //  BartenderAppMVVM
 //
-//  Created by dave noonz on 2021-03-30.
+//  Created by dave noonz on 2021-04-19.
 //
 
 import SwiftUI
 
-class DrinkViewModel: ObservableObject {
-    @Published var results = [DrinkDetails]()
+class RandomDrinkViewModel: ObservableObject {
+    @Published var result = [DrinkDetails]()
     var drinks: Drinks?
  
-    let baseUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    let baseUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
     
     //decodable
     init() {
@@ -32,7 +32,7 @@ class DrinkViewModel: ObservableObject {
             do {
                 let result = try JSONDecoder().decode(Drinks.self, from: data)
                 DispatchQueue.main.async {
-                    self.results = result.drinks
+                    self.result = result.drinks
                 }
             } catch {
                 print(error)

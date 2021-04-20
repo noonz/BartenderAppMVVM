@@ -27,8 +27,11 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
-            DrinksView().navigationTitle("Bartender")
+        
+        ZStack(alignment: .bottomTrailing){
+            NavigationView {
+                DrinksView().navigationTitle("Bartender")
+            }
         }
     }
 }

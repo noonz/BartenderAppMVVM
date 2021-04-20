@@ -26,6 +26,16 @@ struct DrinksView: View {
                     }
                 }.padding(.top,20)
             }
+            
+            // set floating menu on bottom right of screen
+            HStack{
+                Spacer()
+                VStack{
+                    Spacer()
+                    FloatingMenu()
+                        .padding()
+                }
+            }
         }
     }
 }

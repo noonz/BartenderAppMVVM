@@ -10,13 +10,14 @@ import Kingfisher
 
 struct DrinkDetailsView: View {
     //viewmodel
-    @ObservedObject var viewModel = DrinkViewModel()
+    
+    // model
     let drinkDetails: DrinkDetails
     var body: some View {
         
         ScrollView {
             
-            //image and name
+            // image and name
             KFImage(URL(string: drinkDetails.thumbUrl))
                 .resizable()
                 .scaledToFit()
@@ -24,7 +25,6 @@ struct DrinkDetailsView: View {
                 .padding(.vertical, 6)
                 .cornerRadius(16)
                 .shadow(color: .black, radius: 8, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
-            
             VStack(alignment: .leading){
                 Text(drinkDetails.name)
                     .font(.title)
@@ -41,7 +41,6 @@ struct DrinkDetailsView: View {
                 
                 // ingredients
                 // check if ingredients and measurements are not nil, else just check if ingredients are nil
-                // couldn't figure out how to properly use ingredients list from model with swiftui
                 Text("Ingredients:")
                     .font(.title2)
                 VStack(alignment: .leading){
@@ -97,7 +96,7 @@ struct DrinkDetailsView: View {
                     }
                 }
                 
-                    
+                // instructions
                 Divider()
                 Text("Instructions:")
                     .font(.title2)
@@ -107,11 +106,11 @@ struct DrinkDetailsView: View {
             Spacer()
             
         }
-//        .background(KFImage(URL(string: drinkDetails.thumbUrl))
-//                        .ignoresSafeArea(.all)
-//        )
         .background(Color.green
                         .ignoresSafeArea(.all))
     }
     
+    func getIngredients(){
+        
+    }
 }
