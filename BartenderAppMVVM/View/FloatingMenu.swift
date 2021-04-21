@@ -10,6 +10,7 @@ import SwiftUI
 struct FloatingMenu: View {
     // floating menu state
     @State var showMenuItem1 = false
+    
     // viewModel
     @ObservedObject var viewModel = RandomDrinkViewModel()
 
@@ -20,7 +21,9 @@ struct FloatingMenu: View {
             Spacer()
             // display menu item(s)
             if showMenuItem1{
-                MenuItem(icon: "questionmark.circle.fill", drinksDetails: viewModel.result[0])
+                MenuItem(icon: "questionmark.circle.fill",
+                         showMenuItem1: $showMenuItem1,
+                         drinksDetails: viewModel.result[0])
             }
             Button(action:{
                 print(viewModel.result[0].name)
@@ -34,7 +37,12 @@ struct FloatingMenu: View {
                 .frame(width: 50, height: 50)
                 .foregroundColor(Color.blue)
                 .shadow(color: .green, radius: 0.3, x:1, y:1 )
+                .onAppear(perform: {
+                    showMenuItem1 = false
+                })
             }
+
+            
         }
     }
     
@@ -47,11 +55,11 @@ struct FloatingMenu: View {
         })
         // BUG: returns to previous view if looking at random drink details
         // dismiss menu after 10 seconds
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-            withAnimation{
-                self.showMenuItem1.toggle()
-            }
-        })
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+//            withAnimation{
+//                self.showMenuItem1.toggle()
+//            }
+//        })
     }
     
     func resetViewModel(){
@@ -64,6 +72,9 @@ struct FloatingMenu: View {
 struct MenuItem: View {
     // icon image
     var icon: String
+    
+    @Binding var showMenuItem1: Bool
+    
     // nav link state
     @State private var isActive = false
     
@@ -73,14 +84,16 @@ struct MenuItem: View {
     // menu item(s)
     var body: some View {
         ZStack{
+
+            // random drink menu item
             Image(systemName: icon)
                 .resizable()
                 .foregroundColor(Color.blue)
                 .frame(width: 40, height: 40)
                 .font(.system(size: 40, weight: .regular))
                 .onTapGesture {
-                    FloatingMenu().showMenuItem1 = false
                     self.isActive = true
+//                    showMenuItem1 = false
                 }
                 .background(NavigationLink(
                     destination: DrinkDetailsView(drinkDetails: self.drinksDetails)
@@ -88,7 +101,8 @@ struct MenuItem: View {
                     isActive: $isActive,
                     label: {
                         EmptyView()
-            }))
+                    })
+                )
         }
         .shadow(color: .green, radius: 0.4, x: 1, y: 1)
         .transition(.move(edge: .trailing))

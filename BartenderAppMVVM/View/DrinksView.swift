@@ -13,6 +13,7 @@ struct DrinksView: View {
     
     // viewmodel
     @ObservedObject var viewModel = DrinkViewModel()
+//    @ObservedObject var randomDrinkViewModel = RandomDrinkViewModel()
     
     // configure our drink views
     var body: some View {

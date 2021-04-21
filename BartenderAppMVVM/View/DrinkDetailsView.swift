@@ -12,7 +12,8 @@ struct DrinkDetailsView: View {
     //viewmodel
     
     // model
-    let drinkDetails: DrinkDetails
+    var drinkDetails: DrinkDetails
+    
     var body: some View {
         
         ScrollView {
