@@ -30,7 +30,7 @@ struct ContentView: View {
         
         ZStack(alignment: .bottomTrailing){
             NavigationView {
-                DrinksView().navigationTitle("Bartender")
+                DrinkListView().navigationTitle("Bartender")
             }
         }
     }

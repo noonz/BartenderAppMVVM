@@ -19,7 +19,7 @@ struct BartenderMVVM: App {
 
 struct BartenderAppMVVMApp_Previews: PreviewProvider {
     static var previews: some View {
-        DrinksView()
+        DrinkListView()
     }
 }
 

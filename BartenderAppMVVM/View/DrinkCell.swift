@@ -16,6 +16,7 @@ struct DrinkCell: View {
     var body: some View {
         ZStack {
             VStack{
+                
                 // customize drink cells here
                 Text(drinksDetails.name)
                     .font(.headline).bold()

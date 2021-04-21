@@ -12,7 +12,7 @@
 		6B1596CA261404AD00440A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1596C9261404AD00440A1C /* Assets.xcassets */; };
 		6B1596CD261404AD00440A1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1596CC261404AD00440A1C /* Preview Assets.xcassets */; };
 		6B1596DF2614051600440A1C /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1596DE2614051600440A1C /* DrinkCell.swift */; };
-		6B1596E22614128A00440A1C /* DrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1596E12614128A00440A1C /* DrinksView.swift */; };
+		6B1596E22614128A00440A1C /* DrinkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1596E12614128A00440A1C /* DrinkListView.swift */; };
 		6B1596E52614155600440A1C /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1596E42614155600440A1C /* Drinks.swift */; };
 		6B1596E826141B2800440A1C /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1596E726141B2800440A1C /* DrinkViewModel.swift */; };
 		6BAA18F02616B71200E7418B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAA18EF2616B71200E7418B /* Kingfisher */; };
@@ -29,7 +29,7 @@
 		6B1596CC261404AD00440A1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6B1596CE261404AD00440A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B1596DE2614051600440A1C /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
-		6B1596E12614128A00440A1C /* DrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksView.swift; sourceTree = "<group>"; };
+		6B1596E12614128A00440A1C /* DrinkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListView.swift; sourceTree = "<group>"; };
 		6B1596E42614155600440A1C /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
 		6B1596E726141B2800440A1C /* DrinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
 		6BAA19162616CDC000E7418B /* DrinkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailsView.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			children = (
 				6B1596DE2614051600440A1C /* DrinkCell.swift */,
 				6B1596C7261404AC00440A1C /* ContentView.swift */,
-				6B1596E12614128A00440A1C /* DrinksView.swift */,
+				6B1596E12614128A00440A1C /* DrinkListView.swift */,
 				6BAA19162616CDC000E7418B /* DrinkDetailsView.swift */,
 				6BFA8DE1262CD210007C5F90 /* FloatingMenu.swift */,
 			);
@@ -196,7 +196,7 @@
 				6BAA19172616CDC000E7418B /* DrinkDetailsView.swift in Sources */,
 				6B1596E826141B2800440A1C /* DrinkViewModel.swift in Sources */,
 				6BFA8DE2262CD210007C5F90 /* FloatingMenu.swift in Sources */,
-				6B1596E22614128A00440A1C /* DrinksView.swift in Sources */,
+				6B1596E22614128A00440A1C /* DrinkListView.swift in Sources */,
 				6B1596DF2614051600440A1C /* DrinkCell.swift in Sources */,
 				6B1596E52614155600440A1C /* Drinks.swift in Sources */,
 				6B1596C6261404AC00440A1C /* BartenderMVVMApp.swift in Sources */,

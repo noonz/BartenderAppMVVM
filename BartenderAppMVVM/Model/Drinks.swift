@@ -70,6 +70,9 @@ struct DrinkDetails: Decodable, Identifiable {
         ]
     }
     
+    var ingredientsMeasurements: [String] {
+        formatIngredients(ingredients: ingredients, measurements: measurements)
+    }
 
     enum CodingKeys: String, CodingKey {
         case id = "idDrink"
@@ -102,6 +105,23 @@ struct DrinkDetails: Decodable, Identifiable {
         
         case instructions = "strInstructions"
     }
+    
+    // helper function to create a list of ingredients/measurements
+    func formatIngredients(ingredients: [String?],
+                           measurements: [String?]) -> [String]{
+
+        var ingredientList = [String]()
+
+        var i = 0
+        
+        while (i != 9){
+            if (ingredients[i] != nil && measurements[i] != nil){
+                ingredientList.append("\(measurements[i] ?? "") \(ingredients[i] ?? "")")
+            } else if (ingredients[i] != nil) {
+                ingredientList.append("\(ingredients[i] ?? "")")
+            }
+            i+=1
+        }
+        return ingredientList
+    }
 }
-
-

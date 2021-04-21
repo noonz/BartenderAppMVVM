@@ -27,6 +27,7 @@ struct FloatingMenu: View {
             Button(action:{
                 print(viewModel.result[0].name)
                 self.showMenu()
+                // reset data if menuItems are hidden
                 if !showMenuItem1{
                     resetViewModel()
                 }

@@ -39,4 +39,21 @@ class DrinkViewModel: ObservableObject {
             }
         }.resume()
     }
+    
+    func formatIngredients(ingredients: [String?],
+                           measurements: [String?]) -> [String]{
+        
+        var ingredientString = [String]()
+        
+        var i = 0
+        while (i != 9){
+            if (ingredients[i] != nil && measurements[0] != nil){
+                ingredientString.append("\(String(describing: ingredients[0])) - \(String(describing: measurements[0]))")
+            } else if (ingredients[i] != nil) {
+                ingredientString.append("\(String(describing: ingredients[0]))")
+            }
+            i+=1
+        }
+        return ingredientString
+    }
 }
