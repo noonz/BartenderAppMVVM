@@ -22,7 +22,6 @@ struct FloatingMenu: View {
             // display menu item(s)
             if showMenuItem1{
                 MenuItem(icon: "questionmark.circle.fill",
-                         showMenuItem1: $showMenuItem1,
                          drinksDetails: viewModel.result[0])
             }
             Button(action:{
@@ -41,8 +40,6 @@ struct FloatingMenu: View {
                     showMenuItem1 = false
                 })
             }
-
-            
         }
     }
     
@@ -53,13 +50,6 @@ struct FloatingMenu: View {
                 self.showMenuItem1.toggle()
             }
         })
-        // BUG: returns to previous view if looking at random drink details
-        // dismiss menu after 10 seconds
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-//            withAnimation{
-//                self.showMenuItem1.toggle()
-//            }
-//        })
     }
     
     func resetViewModel(){
@@ -72,8 +62,6 @@ struct FloatingMenu: View {
 struct MenuItem: View {
     // icon image
     var icon: String
-    
-    @Binding var showMenuItem1: Bool
     
     // nav link state
     @State private var isActive = false
@@ -93,7 +81,6 @@ struct MenuItem: View {
                 .font(.system(size: 40, weight: .regular))
                 .onTapGesture {
                     self.isActive = true
-//                    showMenuItem1 = false
                 }
                 .background(NavigationLink(
                     destination: DrinkDetailsView(drinkDetails: self.drinksDetails)
