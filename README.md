@@ -24,4 +24,3 @@ Displays drink name, image, instructions and ingredients.
 Click a button to display a random drink!  
 
 ## Credits: Dave Nunez
-Prof. Joshua Vandermost, Advanced IOS Development
